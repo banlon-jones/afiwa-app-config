@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: afiwa-ui
+  labels:
+    app: afiwa-ui
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: afiwa-ui
+  
+  template:
+    metadata:
+      labels:
+        app: afiwa-ui
+    
+    spec:
+      containers:
+      - name: afiwa-ui
+  
+        image: banlon/afiwa-ui:1.0.3
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
