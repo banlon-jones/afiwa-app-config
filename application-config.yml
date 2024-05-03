@@ -8,6 +8,7 @@ spec:
   source: 
     repoURL: https://github.com/banlon-jones/afiwa-app-config.git
     targetRevision: HEAD
+    path: demo
 
   destination:
     server: https://kubernetes.default.svc
